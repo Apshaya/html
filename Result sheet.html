@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Semester 01-Result sheet</p>
+      <label>    EEI3346</label>
+      <input   type="number"
+      id="no1"
+      value="no2"
+      v-model.number="no1" /><br /><br />
+      <label>  EEI3262</label>
+      <input   type="number"
+      id="no2"
+      value="no3"
+      v-model.number="no2" /><br /><br />
+      <label>  EEI3266</label>
+      <input   type="number"
+      id="no3"
+      value="no4"
+      v-model.number="no3" /><br /><br />
+      <label> AGM3203</label>
+      <input   type="number"
+      id="no4"
+      value="no5"
+      v-model.number="no4"/><br /><br />
+      <label>MHZ3459</label>
+      <input  type="number"
+      id="no5"
+      value="no5"
+      v-model.number="no5" /><br />
+      <p>Total :  {{total}}, and   Average :{{Average}} </p>
+    </div>
+    <script>
+       var app = new Vue({
+        el: "#app",
+        data:{ 
+          no1: 0,
+          no2: 0,
+          no3: 0,
+          no4: 0,
+          no5: 0,
+          
+        } ,
+          
+        computed: {
+          total: function () {
+            return this.no1 + this.no2 + this.no3 + this.no4 + this.no5;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
